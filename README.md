@@ -1,3 +1,30 @@
+npm install
+ng serve
+
+add a component
+
+ng g c component-name
+
+change routing by updating app.routes.ts - add child thing:
+
+const appRoutes: Routes = [
+  {path: '', component: AppComponent, children: [
+      {path: '', component: NavbarComponent, children: [
+          {path: 'd3force', component: D3forceComponent},       
+      ]}
+  ]},
+];
+
+ then update 
+navbar/navbar.component.html
+
+ex :  
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/d3force">d3 Graph</a>
+      </li>
+
+
+
 # Timeline
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.3.
